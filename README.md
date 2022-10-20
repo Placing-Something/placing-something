@@ -1,5 +1,5 @@
 <div style="text-align: center">
-    <img alt="Placing Something Logo" src="./readme_assets/ps_banner_light.png" style="width:256px"/>
+    <a href="https://ps.souup.org"><img alt="Placing Something Logo" src="./readme_assets/ps_banner_light.png" style="width:256px"/></a>
 </div>
 
 ## Introduction

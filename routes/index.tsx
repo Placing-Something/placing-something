@@ -36,8 +36,8 @@ export default function Home({ data }: PageProps<Data | null>) {
         <h1 class="mb-2 dark:text-gray-300">{data?.question || "Which do you prefer?"}</h1>
         <Questionnaire />
         <Leaderboard />
-        <h1 class="mt-1 mb-2 dark:text-gray-600 text-gray-500">Copyright © {new Date().getFullYear()} Placing Something. All rights reserved.</h1>
-
+        <p class="mt-1 mb-1 dark:text-gray-600 text-gray-500">Copyright © {new Date().getFullYear()} Placing Something. All rights reserved.</p>
+        <a class="mt-1 mb-2 dark:text-gray-500 text-gray-600" href="https://github.com/placing-something/placing-something">View Source</a>
       </div>
     </body>
   );
