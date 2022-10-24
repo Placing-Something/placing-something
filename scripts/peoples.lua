@@ -7,9 +7,9 @@ type People = {
     attributes: { [number] : Attribute }
 }
 
--- true = not included, false = included
+-- true = included, false = xincluded
 local function filter(person: People): boolean
-    return false
+    return true
 end
 
 local function createAPeople(name, gender, attributes)
@@ -17,6 +17,8 @@ local function createAPeople(name, gender, attributes)
 end
 
 local peoples: { [number] : People } = {
+    createAPeople("Aldo", "Male", {}),
+    createAPeople("Allen", "Male", {}),
     createAPeople("Amanda", "Female", {}),
     createAPeople("Angel", "Male", {}),
     createAPeople("Antonio", "Male", {}),
@@ -27,21 +29,30 @@ local peoples: { [number] : People } = {
     createAPeople("Deron", "Male", {}),
     createAPeople("Eliana", "Female", {}),
     createAPeople("Ethan", "Male", {}),
+    createAPeople("Flo", "Female", {}),
+    createAPeople("Gouraya", "Female", {}),
+    createAPeople("Jag", "Male", {}),
+    createAPeople("Joanna", "Female", {}),
     createAPeople("Jocelyn", "Female", {}),
     createAPeople("Julia", "Female", {}),
+    createAPeople("Kenneth", "Male", {}),
     createAPeople("Kati", "Female", {}),
     createAPeople("Liam", "Male", {}),
     createAPeople("Luvpreet", "Male", {}),
+    createAPeople("Max", "Male", {}),
+    createAPeople("Marylle", "Female", {}),
     createAPeople("Martha", "Female", {}),
     createAPeople("Mason", "Male", {}),
     createAPeople("Nicole", "Female", {}),
+    createAPeople("Omar", "Male", {}),
     createAPeople("Risio", "Male", {}),
     createAPeople("Savannah", "Female", {}),
+    createAPeople("Zuzeth", "Female", {}),
 }
 
 local filtered = {}
 for _, people in peoples do
-    if not filter(people) then
+    if filter(people) then
         table.insert(filtered, people)
     end
 end

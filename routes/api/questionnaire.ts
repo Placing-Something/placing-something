@@ -16,7 +16,7 @@ export const handler: Handlers = {
         const questionnaireKey = `questionnaires:${questionnaire_id}`
         const terms = await redis.lrange(questionnaireKey, 0, 1)
 
-        redis.del(questionnaireKey)
+        await redis.del(questionnaireKey)
 
         if (terms && terms.length > 1 && terms[preference]) {
           const termA = terms[0]

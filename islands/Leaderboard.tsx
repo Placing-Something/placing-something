@@ -38,7 +38,6 @@ export default function Leaderboard() {
 
         return () => clearInterval(timerId)
     }, [refreshLeaderboard])
-
     return <div class="my-6">
         <ol class="list-decimal">
             {leaderboardTop.map((item: LeaderboardEntry) => (
